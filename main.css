@@ -15,7 +15,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   min-height: 100vh;
 
   height: 100vh;
@@ -61,6 +61,8 @@ nav {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .title-container {
   /* outline: 2px solid #f5f; */
@@ -72,7 +74,7 @@ nav {
 
   padding: 1rem;
   /* width: 100%; */
-  margin-top: 15rem;
+  /* margin-top: 15rem; */
 }
 .advice-container {
   /* outline: 2px solid #f5f; */
@@ -143,6 +145,7 @@ nav {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.5);
 }
+
 @media screen and (max-width: 768px) {
   /* nav {
     background-color: rgba(0, 0, 0, 0.5);
@@ -161,5 +164,6 @@ nav {
   }
   .title-container {
     text-align: center;
+    /* margin-top: 10rem; */
   }
 }
