@@ -8,9 +8,6 @@ async function getRandomAdvice() {
 
 async function getSearchAdvice(key) {
   let url = await axios.get(`https://api.adviceslip.com/advice/search/${key}`);
-
-  console.log(url.data);
-
   return url.data;
 }
 
