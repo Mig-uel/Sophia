@@ -1,9 +1,17 @@
 import axios from "axios";
 
-async function advice() {
-  return axios
+async function getRandomAdvice() {
+  return await axios
     .get("https://api.adviceslip.com/advice")
     .then(response => response.data.slip.advice);
 }
 
-export { advice };
+async function getSearchAdvice(key) {
+  let url = await axios.get(`https://api.adviceslip.com/advice/search/${key}`);
+
+  console.log(url.data);
+
+  return url.data;
+}
+
+export { getRandomAdvice, getSearchAdvice };

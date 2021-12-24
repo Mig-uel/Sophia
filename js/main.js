@@ -1,19 +1,10 @@
-import { advice } from "./api";
+import { randomAdvice } from "./randomAdvice";
+import { searchAdvice } from "./search";
 
-advice()
-  .then(data => {
-    console.log(data);
-    document.getElementById("advice").innerHTML = data;
-  })
-  .catch(error => {
-    console.log(error);
-  });
 
-let btn = document.getElementById("btn");
-btn.addEventListener("click", () => {
-  advice()
-    .then(data => {
-      console.log(data);
-      document.getElementById("advice").innerHTML = data;
-    })
-});
+if (document.location.pathname === '/' ||
+  document.location.pathname.indexOf('index') > -1) {
+  randomAdvice();
+}
+else if (document.location.pathname.indexOf('search') > -1)
+  searchAdvice();
